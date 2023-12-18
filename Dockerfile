@@ -1,4 +1,4 @@
-FROM java:8-jdk
+FROM java:17-jdk
 COPY target/SpringDockerDemo-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8010
 ENTRYPOINT ["java", "-jar", "/app.jar"]
