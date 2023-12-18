@@ -1,6 +1,4 @@
-FROM openjdk:17
-RUN mkdir /app
-WORKDIR /app
-COPY target/SpringDockerDemo-0.0.1-SNAPSHOT.jar /app
+FROM java:8-jdk
+COPY target/SpringDockerDemo-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8010
-ENTRYPOINT ["java", "-jar", "SpringDockerDemo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
